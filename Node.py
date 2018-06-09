@@ -2,22 +2,10 @@ while True:
     file = open("Launch.txt", "r")
     Command = file.read()
     if Command == "Launch":
-            BProgress = 0
-            num = 999
-            while True:
-                for i in range(2,num):
-                    if (num % i) == 0:
-                        num += 2
-                        BProgress += 1
-                else:
-                        print(num)
-                        num += 2
-                        BProgress += 1
-                    
-                if BProgress >= 1000:
-                    print("Block complete")
-                    BProgress = 0
-                    num += 2000
+        for i in range (5):
+            file = open("JunkFile1.txt", "a")
+            file.write("10000000000000000000000000000000000000")
+            file.close()
     elif Command == "Kill":
             print("Kill Success")
     file.close()
